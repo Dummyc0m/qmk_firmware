@@ -42,6 +42,7 @@ void ergodox_blink_all_leds(void)
 }
 
 uint8_t init_mcp23017(void) {
+    mcp23017_status = 0x20;
     if (!i2c_initializied) {
         i2c_init();
         i2c_initializied = 1;
